@@ -13,8 +13,7 @@ const Homepage = () => {
   const globalStats = data?.data?.stats;
 
   if(isFetching) return 'Loading';
-  // console.log(data);
-  
+ 
   return (
     <>
       <Title level={2} className='heading'>Global Crypto Stats</Title>
@@ -26,7 +25,7 @@ const Homepage = () => {
         <Col span={12}><Statistic title="Total Markets" value={globalStats.totalMarkets} /></Col>
       </Row>
       <div className='home-heading-container'>
-        <Title level={2} className='home-title'>Top 10 Cryptocurrencies in the world</Title>
+        <Title level={2} className='home-title'>Top 10 Cryptocurrencies</Title>
         <Title level={3} className='show-more'><Link to="/cryptocurrencies">Show More</Link></Title>
       </div>
       <Cryptocurrencies simplified />

@@ -1,9 +1,9 @@
-import React from 'react'
-import { Button, Menu, Typography, Avatar } from 'antd'
-import { Link } from 'react-router-dom'
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined } from '@ant-design/icons/lib/icons'
+import React from 'react';
+import { Button, Menu, Typography, Avatar } from 'antd';
+import { Link } from 'react-router-dom';
+import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined } from '@ant-design/icons/lib/icons';
 
-import icon from '../images/cryptocurrency.png'
+import icon from '../images/cryptocurrency.png';
 
 const Navbar = () => {
   return (
@@ -32,4 +32,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;

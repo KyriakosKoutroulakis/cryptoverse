@@ -17,7 +17,7 @@ const Homepage = () => {
   return (
     <>
       <Title level={2} className='heading'>Global Crypto Stats</Title>
-      <Row>
+      <Row gutter={[32, 32]}>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
         <Col span={12}><Statistic title="Total Exchanges" value={globalStats.totalExchanges} /></Col>
         <Col span={12}><Statistic title="Total Market Cap" value={millify(globalStats.totalMarketCap)} /></Col>
@@ -35,7 +35,7 @@ const Homepage = () => {
       </div>
       <News simplified />
     </>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

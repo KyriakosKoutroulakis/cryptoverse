@@ -7,7 +7,7 @@ import icon from '../images/cryptocurrency.png';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
-  const [screenSize, setScreenSize] = useState(null);
+  const [screenSize, setScreenSize] = useState(undefined);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (screenSize < 768) {
+    if (screenSize <= 800) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -31,15 +31,8 @@ const Navbar = () => {
     <div className='nav-container'>
       <div className='logo-container'>
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className='logo'>
-          <Link to="/">Cryptoverse</Link>
-        </Typography.Title>
-        <Button 
-          className='menu-control-container'
-          onClick={() => setActiveMenu(!activeMenu)}
-        >
-          <MenuOutlined /> 
-        </Button>
+        <Typography.Title level={2} className='logo'><Link to="/">Cryptoverse</Link></Typography.Title>
+        <Button className='menu-control-container' onClick={() => setActiveMenu(!activeMenu)}><MenuOutlined /></Button>
       </div>
       {activeMenu && (
         <Menu theme='dark'>
@@ -58,7 +51,7 @@ const Navbar = () => {
         </Menu>
       )}    
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
